@@ -1,0 +1,110 @@
+const homePageButton = document.getElementById("homeLink");
+homePageButton.addEventListener('click', loadPage("Home", "This is the description for the home page"));
+
+// A function to navigate to About Page content
+const aboutPageButton = document.getElementById("aboutLink");
+aboutPageButton.addEventListener('click', loadPage('About', 'This is the about page'));
+
+// A function to navigate to Contact Page content - Ricky
+const contactButton = document.getElementById("contactLink");
+contactButton.addEventListener('click', loadPage('Contact', 'This is a test content for the contact page'));
+
+// Parameters (Variables)
+// Function Code (Static)
+
+// What is exactly the same in each function
+// 1) markup variable
+// 2) Target main element
+// 3) Inject markup into main element
+// 4) the h1 element
+// 5) the p element
+
+// What is different in each function
+// 1) content of h1 tag
+// 2) content of p tag
+
+function loadPage(title, paragraph) {
+    const markup = `
+        <h1>${title}</h1>
+        <p>${paragraph}</p>
+    `;
+    
+    const mainSection = document.querySelector("main");
+    mainSection.innerHTML = markup;
+}
+
+// function loadHomePage() {
+//     const markup = `
+//         <h1>Home</h1>
+//         <p>This is a brief description about the home page</p>
+//     `;
+
+//     const mainSection = document.querySelector("main");
+//     mainSection.innerHTML = markup;
+// }
+
+// function loadAboutPage() {
+//     const markup = `
+//         <h1>About Page</h1>
+//         <p>This is a brief description about the about page</p>
+//     `;
+    
+//     const mainSection = document.querySelector("main");
+//     mainSection.innerHTML = markup;
+// }
+
+// function loadContactPage() {
+//     const markup = `
+//         <h1>Contact Page</h1>
+//         <p>This is a test content for the contact page</p>
+//         <ul>
+//             <li>Facebook</li>
+//             <li>Instagram</li>
+//             <li>Twitter</li>
+//         </ul>
+//     `;
+//     const mainSection = document.querySelector("main");
+//     mainSection.innerHTML = markup;
+// }
+
+export const homeContent = {
+    title: "Home",
+    description: "Home page description"
+}
+
+export const contactContent = {
+    title: 'Contact',
+    description: 'This is a test content for the contact page'
+}
+
+export const aboutContent = {
+    title: 'About',
+    description: "This is the class about page"
+}
+
+  // const homePageButton = document.getElementById("homeLink");
+    // homePageButton.addEventListener('click', () =>  loadPage(homeContent.title, homeContent.description));
+
+    // // A function to navigate to About Page content
+    // const aboutPageButton = document.getElementById("aboutLink");
+    // aboutPageButton.addEventListener('click', () => loadPage(aboutContent.title, aboutContent.description));
+
+    // // A function to navigate to Contact Page content - Ricky
+    // const contactButton = document.getElementById("contactLink");
+    // contactButton.addEventListener('click', () => loadPage(contactContent.title, contactContent.description));
+
+    // What's is common amongst following code
+// 1) We're creating variables for BUTTONS
+// 2) document.getElementById
+// 3) addEventListener
+// 4) Click events
+// 5) All use loadPage function
+
+// What's different amongst following code
+// 1) Variable Identifier
+// 2) Button #ids
+// 3) loadPage parameters
+
+// function renderLinks() {
+   
+// }
