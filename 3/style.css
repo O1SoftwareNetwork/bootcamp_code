@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.host {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event {
+    display: flex;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.event_info {
+    flex-grow: 1;
+}
+
+.event_img {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    /* 0 means dont ever shrink, i guess */
+    flex-shrink: 0;
+}
+
+.meet_and_greet {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.organize {
+
+}
+
+.groups_header {
+    margin-bottom: 20px;
+}
+
+.group_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.group {
+    display: flex;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.group_info {
+    flex-grow: 1;
+}  
+    
+.group_img {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .host{
+        width: 40%;
+    }
+    
+    .organize {
+        width: 60%;
+    }    
+}
+
+@media (min-width: 1200px) {
+    .group_container {
+        flex-direction: row;
+    }
+
+    .group { 
+        flex-direction:column-reverse;
+        
+    }
+}

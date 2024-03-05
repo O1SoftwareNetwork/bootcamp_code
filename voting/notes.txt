@@ -1,0 +1,29 @@
+Libraries:
+Prisma
+nextui
+    npm install
+        - @nextui-org/react
+        - framer-motion
+    Inside tailwind.config.ts file
+        - import { nextui } from '@nextui-org/react'
+        - Add './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}' to content array inside config object
+        - Add darkMode property with a value of "class" to the config object just above plugins
+        - Add nextui() to the plugins array
+        - Create provider to wrap app
+            - Create providers.tsx file inside the app directory
+            - Set it to client component
+            - import { NextUIProvider } from '@nextui-org/react'
+            - export default function Providers()
+                - Set the props to an object that contains a children object
+                - Create a TypeScript interface called ProvidersProps
+                    - Set it as an object with a property of children and a value of React.ReactNode
+                - Set parameter type to ProvidersProps
+                - return the NextUIProvider from component and wrap a children object inside it
+        - Add newly created provider to root layout
+            - import Providers from '@/app/providers'
+            - Wrap children inside the Provider
+        - Test configuration
+            - import { Button } from '@nextui-org/react
+            - Create Button component to make sure it works
+next-auth/authjs
+Github OAuth
